@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chuyển đổi đơn vị</title>
+</head>
+<body>
+    <script>
+        // Chuyển đổi từ feet sang meters
+function footToMeter(foot) {
+  return 0.305 * foot;
+}
+
+// Chuyển đổi từ meters sang feet
+function meterToFoot(meter) {
+  return 3.279 * meter;
+}
+
+// Ví dụ sử dụng:
+const feet = 10;
+const meters = 3;
+
+console.log(`${feet} feet = ${footToMeter(feet)} meters`);
+console.log(`${meters} meters = ${meterToFoot(meters)} feet`);
+document.writeln( feet ," feet = " ,footToMeter(feet) ,"meters");
+document.writeln("<br>")
+document.writeln(meters,"meters =", meterToFoot(meters), "feet")
+    </script>
+</body>
+</html>
