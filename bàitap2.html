@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Tổng hợp các bài luyện tập JavaScript</title>
+    <script>
+        // Bài 1: Tính bình phương
+        function square(n) {
+            return n * n;
+        }
+
+        // Bài 2: Tính diện tích và chu vi hình tròn
+        function circleArea(radius) {
+            return Math.PI * radius * radius;
+        }
+
+        function circlePerimeter(radius) {
+            return 2 * Math.PI * radius;
+        }
+
+        // Bài 3: Tính giai thừa
+        function factorial(n) {
+            if (n < 0) return -1;
+            if (n === 0 || n === 1) return 1;
+            return n * factorial(n - 1);
+        }
+
+        // Bài 4: Kiểm tra ký tự số
+        function isDigit(char) {
+            return char >= '0' && char <= '9';
+        }
+
+        // Bài 5: Tìm số nguyên nhỏ nhất trong 3 số
+        function minOfThree(a, b, c) {
+            return Math.min(a, b, c);
+        }
+
+        // Bài 6: Kiểm tra số nguyên dương
+        function isPositiveInteger(n) {
+            return Number.isInteger(n) && n > 0;
+        }
+
+        // Bài 7: Đổi chỗ hai số nguyên
+        function swap(a, b) {
+            return [b, a];
+        }
+
+        // Bài 8: Đảo ngược mảng
+        function reverseArray(arr) {
+            return arr.slice().reverse();
+        }
+
+        // Bài 9: Kiểm tra ký tự trong mảng
+        function countCharacterInArray(arr, char) {
+            let count = 0;
+            for (let i = 0; i < arr.length; i++) {
+                if (arr[i] === char) {
+                    count++;
+                }
+            }
+            return count > 0 ? count : -1;
+        }
+    </script>
+</head>
+<body>
+    <h1>Tổng hợp các bài luyện tập JavaScript</h1>
+
+    <h2>Bài 1: Tính bình phương</h2>
+    <script>
+        let num = 4;
+        document.write("Bình phương của " + num + " là: " + square(num) + "<br>");
+    </script>
+
+    <h2>Bài 2: Diện tích và chu vi hình tròn</h2>
+    <script>
+        let r = 5;
+        document.write("Bán kính: " + r + "<br>");
+        document.write("Diện tích: " + circleArea(r).toFixed(2) + "<br>");
+        document.write("Chu vi: " + circlePerimeter(r).toFixed(2) + "<br>");
+    </script>
+
+    <h2>Bài 3: Tính giai thừa</h2>
+    <script>
+        let gt = 5;
+        document.write(gt + "! = " + factorial(gt) + "<br>");
+    </script>
+
+    <h2>Bài 4: Kiểm tra ký tự số</h2>
+    <script>
+        let charTest = '8';
+        document.write("Ký tự '" + charTest + "' có phải là số? " + isDigit(charTest) + "<br>");
+    </script>
+
+    <h2>Bài 5: Tìm số nguyên nhỏ nhất trong 3 số</h2>
+    <script>
+        let a = 7, b = 2, c = 10;
+        document.write("Số nhỏ nhất trong (" + a + ", " + b + ", " + c + ") là: " + minOfThree(a, b, c) + "<br>");
+    </script>
+
+    <h2>Bài 6: Kiểm tra số nguyên dương</h2>
+    <script>
+        let checkNum = 9;
+        document.write("Số " + checkNum + " có phải nguyên dương? " + isPositiveInteger(checkNum) + "<br>");
+    </script>
+
+    <h2>Bài 7: Đổi chỗ hai số nguyên</h2>
+    <script>
+        let x = 3, y = 8;
+        let swapped = swap(x, y);
+        document.write("Trước khi đổi: x = " + x + ", y = " + y + "<br>");
+        document.write("Sau khi đổi: x = " + swapped[0] + ", y = " + swapped[1] + "<br>");
+    </script>
+
+    <h2>Bài 8: Đảo ngược mảng</h2>
+    <script>
+        let arr1 = [1, 2, 3, 4, 5];
+        document.write("Mảng ban đầu: " + arr1.join(", ") + "<br>");
+        document.write("Mảng sau khi đảo ngược: " + reverseArray(arr1).join(", ") + "<br>");
+    </script>
+
+    <h2>Bài 9: Kiểm tra ký tự trong mảng</h2>
+    <script>
+        let charArr = ['a', 'b', 'c', 'a', 'd', 'a'];
+        let searchChar = 'a';
+        let count = countCharacterInArray(charArr, searchChar);
+        if (count !== -1) {
+            document.write("Ký tự '" + searchChar + "' xuất hiện " + count + " lần trong mảng.<br>");
+        } else {
+            document.write("Ký tự '" + searchChar + "' không có trong mảng.<br>");
+        }
+    </script>
+
+</body>
+</html>
