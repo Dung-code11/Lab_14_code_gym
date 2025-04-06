@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kiểm tra từ đối xứng</title>
+</head>
+<body>
+    <script>
+        function isPalindrome(s) {
+    // Trường hợp cơ bản: nếu chuỗi rỗng hoặc chỉ có 1 ký tự thì chắc chắn là đối xứng
+    if (s.length <= 1) {
+        return true;
+    }
+
+    // So sánh ký tự đầu và ký tự cuối
+    if (s[0] !== s[s.length - 1]) {
+        return false;
+    }
+
+    // Gọi đệ quy với chuỗi con đã loại bỏ ký tự đầu và cuối
+    return isPalindrome(s.substring(1, s.length - 1));
+}
+
+// Ví dụ sử dụng
+console.log(isPalindrome("racecar")); // true
+document.writeln(isPalindrome("racecar"))
+console.log(isPalindrome("hello")); 
+document.writeln(isPalindrome("hello"))  // false
+console.log(isPalindrome("madam")); 
+document.writeln(isPalindrome("madam"))  // true
+
+    </script>
+</body>
+</html>
