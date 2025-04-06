@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Tổng hợp Bài Tập 1 JavaScript</title>
+    <script>
+        // Bài 1
+        function alertMessage() {
+            alert("Xin chào");
+        }
+
+        // Bài 2
+        function increaseNumber(n) {
+            return n + 1;
+        }
+
+        // Bài 3
+        function compareNumbers(a, b) {
+            if (a > b) {
+                alert("Tham số thứ nhất lớn hơn tham số thứ hai.");
+                return null;
+            } else {
+                return a + b;
+            }
+        }
+
+        // Bài 4
+        function addNumbers() {
+            let firstNum = 4;
+            let secondNum = 8;
+            let result = firstNum + secondNum;
+            alert("Giá trị result trong hàm: " + result);
+            return result;
+        }
+
+        // Bài 5
+        let stars = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"];
+        let constellations = ["Ursa Minor", "Taurus", "Cygnus", "Lyra", "Aquila", "Ursa Major", "Leo"];
+
+        function findConstellation(starName) {
+            for (let i = 0; i < stars.length; i++) {
+                if (stars[i].toLowerCase() === starName.toLowerCase()) {
+                    return constellations[i];
+                }
+            }
+            return null;
+        }
+    </script>
+</head>
+<body onload="alertMessage()">
+
+    <h2>Bài 1: alertMessage()</h2>
+    <p>(Đã hiển thị "Xin chào" khi tải trang)</p>
+
+    <hr>
+
+    <h2>Bài 2: Tăng giá trị số lên 1</h2>
+    <script>
+        let value2 = 5;
+        let result2 = increaseNumber(value2);
+        document.write("Giá trị ban đầu: " + value2 + "<br>");
+        document.write("Giá trị sau khi tăng: " + result2 + "<br>");
+    </script>
+
+    <hr>
+
+    <h2>Bài 3: So sánh hai số và xử lý</h2>
+    <script>
+        let a = 3, b = 5;
+        let result3 = compareNumbers(a, b);
+        if (result3 !== null) {
+            document.write("Tổng hai số là: " + result3 + "<br>");
+        }
+    </script>
+
+    <hr>
+
+    <h2>Bài 4: Thêm alert() vào mã</h2>
+    <script>
+        let result4 = 0;
+        alert("Giá trị result trước khi gọi hàm: " + result4);
+        result4 = addNumbers();
+        alert("Giá trị result sau khi gọi hàm: " + result4);
+    </script>
+
+    <hr>
+
+    <h2>Bài 5: Tìm chòm sao từ tên ngôi sao</h2>
+    <script>
+        let inputStar = prompt("Nhập tên ngôi sao:");
+        let constellation = findConstellation(inputStar);
+        if (constellation !== null) {
+            document.write("Chòm sao tương ứng: " + constellation);
+        } else {
+            document.write("Không tìm thấy ngôi sao có tên: " + inputStar);
+        }
+    </script>
+
+</body>
+</html>
